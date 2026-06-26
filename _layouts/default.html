@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saverio Pietro Capra</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    {% if page.url == "/" %}
+        {% assign active = site.posts.first %}
+    {% else %}
+        {% assign active = page %}
+    {% endif %}
+
+    <div class="page-wrapper">
+        <main class="magazine-grid">
+            
+            <aside class="grid-item left-sidebar">
+                <div class="sidebar-block">
+                    <div class="section-title">AUTHOR</div>
+                    <div class="sidebar-value font-mono">Saverio Pietro Capra</div>
+                </div>
+                <div class="sidebar-block">
+                    <div class="section-title">STATS</div>
+                    <div class="sidebar-value font-mono">Total Posts // {{ site.posts.size }}</div>
+                </div>
+            </aside>
+
+            <section class="grid-item main-content">
+                {{ content }}
+            </section>
+
+            <aside class="grid-item right-sidebar">
+                {% if active.subject %}
+                <div class="sidebar-block">
+                    <div class="section-title">SUBJECT</div>
+                    <p class="font-mono text-muted">{{ active.subject }}</p>
+                    {% if active.formula %}
+                        <div class="equation">{{ active.formula }}</div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if active.images %}
+                <div class="sidebar-block">
+                    <div class="section-title">IMAGES</div>
+                    <div class="gallery-wrapper">
+                        {% for img in active.images %}
+                            <div class="image-container">
+                                <img src="{{ img.path | relative_url }}" alt="Ref Image" class="brutal-image">
+                                <span class="image-caption">{{ img.caption }}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <nav class="navigation-block">
+                    <a href="{{ '/' | relative_url }}">[ INDEX ]</a>
+                    <a href="https://github.com/SaverioPCapra">[ GITHUB ]</a>
+                </nav>
+            </aside>
+
+        </main>
+    </div>
+
+</body>
+</html>

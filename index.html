@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="grid-item feature-post">
+    {% for post in site.posts %}
+        <article class="post-entry" style="margin-bottom: 4rem; border-bottom: 1px solid #000; padding-bottom: 2rem;">
+            
+            <h1 class="post-title" style="font-size: 2rem; text-transform: uppercase; margin-bottom: 1.5rem;">
+                <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #000;">
+                    {{ post.title }}
+                </a>
+            </h1>
+            
+            <div class="post-body">
+                {{ post.content }}
+            </div>
+            
+        </article>
+    {% endfor %}
+</div>

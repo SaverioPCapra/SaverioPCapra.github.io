@@ -1,0 +1,172 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: #eae6df; 
+    color: #111111; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 3vw;
+}
+
+.page-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 1px solid #111111;
+    background-color: #eae6df;
+}
+
+.magazine-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1.5fr;
+    min-height: 80vh;
+}
+
+.grid-item {
+    padding: 25px;
+}
+
+.left-sidebar {
+    grid-column: 1 / 2;
+    border-right: 1px solid #111111;
+    background-color: #e3ded6; 
+}
+
+.main-content {
+    grid-column: 2 / 3;
+    border-right: 1px solid #111111;
+    background-color: #eae6df;
+}
+
+.right-sidebar {
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-color: #e3ded6;
+}
+
+.font-mono {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+}
+
+.text-muted {
+    color: #706d66; 
+}
+
+.section-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.sidebar-block {
+    margin-bottom: 35px;
+}
+
+.sidebar-value {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.post-meta {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #706d66;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.post-body p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.equation {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px dashed #111111;
+    background: #e3ded6;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.brutal-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #111111;
+    padding: 3px;
+    background: #eae6df;
+}
+
+.navigation-block {
+    border-top: 1px solid #111111;
+    padding-top: 20px;
+    display: flex;
+    gap: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navigation-block a {
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation-block a:hover {
+    background-color: #111111;
+    color: #eae6df;
+}
+
+@media (max-width: 900px) {
+    .magazine-grid {
+        grid-template-columns: 1fr;
+    }
+    .left-sidebar, .main-content, .right-sidebar {
+        grid-column: 1 / 2;
+        border-right: none;
+        border-bottom: 1px solid #111111;
+    }
+}
+
+.poem {
+    white-space: pre-line;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.image-caption {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    color: #706d66;
+    text-transform: uppercase;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+}
