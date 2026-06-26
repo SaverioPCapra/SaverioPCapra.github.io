@@ -27,6 +27,18 @@
                     <div class="section-title">STATS</div>
                     <div class="sidebar-value font-mono">Total Posts // {{ site.posts.size }}</div>
                 </div>
+                <div class="sidebar-block">
+                    <div class="section-title">ARCHIVE</div>
+                    <ul class="archive-list font-mono">
+                        {% for post in site.posts %}
+                            <li>
+                                <a href="{{ post.url | relative_url }}">
+                                    // {{ post.title | upcase }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </aside>
 
             <section class="grid-item main-content">
@@ -59,7 +71,7 @@
                 {% endif %}
 
                 <nav class="navigation-block">
-                    <a href="{{ '/' | relative_url }}">[ INDEX ]</a>
+                    <a href="{{ '/' | relative_url }}">[ HOME ]</a>
                     <a href="https://github.com/SaverioPCapra">[ GITHUB ]</a>
                 </nav>
             </aside>

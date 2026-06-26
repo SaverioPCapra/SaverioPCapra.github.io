@@ -170,3 +170,44 @@ body {
     margin-top: 6px;
     letter-spacing: 0.5px;
 }
+
+.post-navigation {
+    margin-top: 60px; 
+    display: flex; 
+    justify-content: space-between; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 0.85rem; 
+    border-top: 1px solid #111111; 
+    padding-top: 30px;
+}
+
+.post-navigation a {
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-navigation a:hover {
+    background-color: #111111;
+    color: #eae6df;
+}
+
+.archive-list {
+    list-style: none;
+}
+
+.archive-list li {
+    margin-bottom: 10px;
+}
+
+.archive-list a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.archive-list a:hover {
+    color: #706d66;
+    text-decoration: underline;
+}

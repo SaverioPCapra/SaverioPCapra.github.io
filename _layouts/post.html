@@ -10,4 +10,17 @@ layout: default
             {{ content }}
         </div>
     </article>
+
+    <nav class="post-navigation">
+        <div>
+            {% if page.previous %}
+                <a href="{{ page.previous.url | relative_url }}">[ PREV: {{ page.previous.title | upcase }} ]</a>
+            {% endif %}
+        </div>
+        <div>
+            {% if page.next %}
+                <a href="{{ page.next.url | relative_url }}">[ NEXT: {{ page.next.title | upcase }} ]</a>
+            {% endif %}
+        </div>
+    </nav>
 </div>
