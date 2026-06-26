@@ -211,3 +211,8 @@ body {
     color: #706d66;
     text-decoration: underline;
 }
+
+.archive-list {
+    list-style: none;
+    padding-left: 0;
+}
